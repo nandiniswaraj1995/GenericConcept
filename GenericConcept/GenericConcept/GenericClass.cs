@@ -6,15 +6,18 @@ namespace GenericConcept
 {
     public class GenericClass<T> where T : IComparable
     {
-        public static T maximum(T x, T y, T z)
+        public static T maximum(params T[] elements)
         {
-            T max = x;
-            if (y.CompareTo(max) > 0)
-                max = y;
-            if (z.CompareTo(max) > 0)
-                max = z;
+            T max = elements[0];
+            foreach(T element in elements)
+            {
+                if (element.CompareTo(max) > 0)
+                {
+                    max = element;
+                }
+            }
             return max;
-        }
+           }
 
 
 
