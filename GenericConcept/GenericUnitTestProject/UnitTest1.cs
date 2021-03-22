@@ -44,6 +44,25 @@ namespace GenericUnitTestProject
             float max = GenericClass<float>.maximum(5.5f, 6.5f, 8.5f);
             Assert.AreEqual(8.5f, max);
         }
+        [TestMethod]
+        public void Given_MaxStringNumber_1st_Position_ShouldReturnSame()
+        {
+            string max = GenericClass<string>.maximum("Peach", "Apple", "Banana");
+            Assert.AreEqual("Peach", max);
+        }
+        [TestMethod]
+        public void Given_MaxStringNumber_2nd_Position_ShouldReturnSame()
+        {
+            string max = GenericClass<string>.maximum("Apple", "Peach", "Banana");
+            Assert.AreEqual("Peach", max);
+        }
+
+        [TestMethod]
+        public void Given_MaxStringNumber_3rd_Position_ShouldReturnSame()
+        {
+            string max = GenericClass<string>.maximum("Apple", "Banana", "Peach");
+            Assert.AreEqual("Peach", max);
+        }
 
     }
 }

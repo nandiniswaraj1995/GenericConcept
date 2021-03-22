@@ -24,6 +24,16 @@ namespace GenericConcept
                 max = z;
             return max;
         }
+        public static string maximum(string x, string y, string z)
+        {
+            string max = x;
+            if (y.CompareTo(max) > 0)
+                max = y;
+            if (z.CompareTo(max) > 0)
+                max = z;
+            return max;
+        }
+
 
 
     }
