@@ -16,8 +16,13 @@ namespace GenericConcept
                     max = element;
                 }
             }
+            printMax(max);
             return max;
            }
+        public static void printMax(T element)
+        {
+            Console.WriteLine("Max Value: "+element);
+        }
 
 
 

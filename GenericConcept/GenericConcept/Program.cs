@@ -6,7 +6,7 @@ namespace GenericConcept
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            GenericClass<int>.maximum(2, 3, 4, 5);
         }
     }
 }
